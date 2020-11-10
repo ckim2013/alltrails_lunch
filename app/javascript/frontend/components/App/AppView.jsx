@@ -19,9 +19,11 @@ const AppView = (props) => {
       />
       <div className='list-map-wrapper'>
         <List 
-        places={ places }
+          places={ places }
         />
-        <Map />
+        <Map 
+          places={ places }
+        />
       </div>
     </div>
   );

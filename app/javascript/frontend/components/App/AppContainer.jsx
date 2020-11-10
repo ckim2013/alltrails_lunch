@@ -11,7 +11,7 @@ export default class AppContainer extends Component {
       places: [],
       query: '',
     };
-    
+
     this.handleChange = this.handleChange.bind(this);
   }
   
@@ -24,6 +24,8 @@ export default class AppContainer extends Component {
       
       axios.get(`/restaurants/fetch?query=${ this.state.query }`)
         .then((res) => {
+          console.log('res!!', res.data.places)
+          this.setState({ places: res.data.places });
           console.log('reached inside rails');
         })
         .catch((res) => {

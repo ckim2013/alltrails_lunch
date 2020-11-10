@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def fetch
     client = GooglePlacesApi.new
-    results = client.fetch(query: params[:query])
-    render json: results
+    places = client.fetch(query: params[:query])
+    render json: { places: places }
   end
 end
