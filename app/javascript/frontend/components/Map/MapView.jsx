@@ -4,9 +4,7 @@ const MapView = (props) => {
   const { joke } = props;
   
   return (
-    <div>
-      Map!
-    </div>  
+    <div id="map"></div>  
   );
 };
 
