@@ -11,14 +11,16 @@ const AppView = (props) => {
   } = props;
   
   return (
-    <div>
+    <div className="app-wrapper">
       <NavBar 
         searchWord={ searchWord }
       />
-      <List 
+      <div className='list-map-wrapper'>
+        <List 
         places={ places }
-      />
-      <Map />
+        />
+        <Map />
+      </div>
     </div>
   );
 };

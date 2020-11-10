@@ -4,7 +4,7 @@ const ListView = (props) => {
   const { joke } = props;
   
   return (
-    <div>
+    <div className='list'>
       List!
     </div>  
   );

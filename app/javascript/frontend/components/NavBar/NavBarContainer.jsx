@@ -6,6 +6,10 @@ export default class NavBarContainer extends Component {
   constructor(props) {
     super(props);
   }
+  
+  submitWord() {
+    
+  }
 
   render() {
     return (
