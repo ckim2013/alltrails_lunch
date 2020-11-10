@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import App from './components/App';
+import App from './components/App/AppContainer';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
-  ReactDOM.render(<div>Hello world!</div>, root);
+  ReactDOM.render(<App />, root);
 });
