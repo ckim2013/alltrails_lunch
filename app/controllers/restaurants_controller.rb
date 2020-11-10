@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def fetch
-    p 'inside controller!'
-    p params
-    head(:ok)
+    client = GooglePlacesApi.new
+    results = client.fetch(query: params[:query])
+    render json: results
   end
 end
