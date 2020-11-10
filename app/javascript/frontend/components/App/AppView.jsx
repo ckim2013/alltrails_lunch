@@ -6,14 +6,16 @@ import Map from '../Map/MapContainer';
 
 const AppView = (props) => {
   const {
-    searchWord,
+    handleChange,
     places,
+    query,
   } = props;
   
   return (
     <div className="app-wrapper">
       <NavBar 
-        searchWord={ searchWord }
+        handleChange={ handleChange }
+        query={ query }
       />
       <div className='list-map-wrapper'>
         <List 

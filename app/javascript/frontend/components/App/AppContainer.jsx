@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import AppView from './AppView';
 
@@ -7,21 +8,42 @@ export default class AppContainer extends Component {
     super(props);
     
     this.state = {
-      searchWord: '',
       places: [],
+      query: '',
     };
+    
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  handleChange(e) {
+    this.setState({ query: e.target.value });
+    clearTimeout(this.delayTimer);
+    this.delayTimer = setTimeout(() => {
+      const csrfToken = document.querySelector("meta[name=csrf-token]").content;
+      axios.defaults.headers.common['X-CSRF-Token'] = csrfToken;
+      
+      axios.get(`/restaurants/fetch?query=${ this.state.query }`)
+        .then((res) => {
+          console.log('reached inside rails');
+        })
+        .catch((res) => {
+          console.log('some error has occurred');
+        });
+      
+    }, 500);
   }
 
   render() {
     const {
-      searchWord,
       places,
+      query,
     } = this.state;
     
     return (
       <AppView
-        searchWord={ searchWord }
+        handleChange={ this.handleChange }
         places={ places }
+        query={ query }
       />
     );
   }

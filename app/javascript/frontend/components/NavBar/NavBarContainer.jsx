@@ -6,14 +6,17 @@ export default class NavBarContainer extends Component {
   constructor(props) {
     super(props);
   }
-  
-  submitWord() {
-    
-  }
 
   render() {
+    const {
+      handleChange,
+      query,
+    } = this.props;
+    
     return (
       <NavBarView
+        handleChange={ handleChange }
+        query={ query }
       />
     );
   }

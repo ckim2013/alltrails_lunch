@@ -22,3 +22,17 @@ html, body, #root, .app-wrapper {
   position: relative;
   height: 100%;
 }
+
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.list {
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
