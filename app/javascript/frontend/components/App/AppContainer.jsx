@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import AppView from './AppView';
 
@@ -14,24 +13,15 @@ export default class AppContainer extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.updatePlaces = this.updatePlaces.bind(this);
   }
   
   handleChange(e) {
     this.setState({ query: e.target.value });
-    clearTimeout(this.delayTimer);
-    this.delayTimer = setTimeout(() => {
-      const csrfToken = document.querySelector("meta[name=csrf-token]").content;
-      axios.defaults.headers.common['X-CSRF-Token'] = csrfToken;
-      
-      axios.get(`/restaurants/fetch?query=${ this.state.query }`)
-        .then((res) => {
-          this.setState({ places: res.data.places });
-        })
-        .catch((res) => {
-          console.log('some error has occurred');
-        });
-      
-    }, 500);
+  }
+  
+  updatePlaces(places) {
+    this.setState({ places: places });
   }
 
   render() {
@@ -47,6 +37,7 @@ export default class AppContainer extends Component {
         handleChange={ this.handleChange }
         places={ places }
         query={ query }
+        updatePlaces={ this.updatePlaces }
       />
     );
   }

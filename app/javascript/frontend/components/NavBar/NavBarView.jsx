@@ -3,6 +3,7 @@ import React from 'react';
 const NavBarView = (props) => {
   const { 
     handleChange,
+    onEnter,
     query,
   } = props;
   
@@ -18,6 +19,7 @@ const NavBarView = (props) => {
           placeholder="Search for a restaurant"
           value={ query }
           onChange={ handleChange }
+          onKeyUp={ onEnter }
         />
       </div>
     </div>  

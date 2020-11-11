@@ -10,7 +10,7 @@ class GooglePlacesApi
 
   def fetch(query:)
     return [] if query.empty?
-    
+
     spots = @client.spots(
       LAT,
       LNG,

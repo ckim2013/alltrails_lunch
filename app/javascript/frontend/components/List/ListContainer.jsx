@@ -11,8 +11,6 @@ export default class ListContainer extends Component {
     const {
       places,
     } = this.props;
-
-    console.log('inside list view!',  places);
     
     return (
       <div className="list-index">

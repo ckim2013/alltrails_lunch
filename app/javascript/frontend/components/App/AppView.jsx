@@ -11,6 +11,7 @@ const AppView = (props) => {
     handleChange,
     places,
     query,
+    updatePlaces,
   } = props;
   
   return (
@@ -18,6 +19,7 @@ const AppView = (props) => {
       <NavBar 
         handleChange={ handleChange }
         query={ query }
+        updatePlaces={ updatePlaces }
       />
       <Toggle
         display={ display }
