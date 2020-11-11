@@ -8,6 +8,7 @@ export default class AppContainer extends Component {
     super(props);
     
     this.state = {
+      display: 'map',
       places: [],
       query: '',
     };
@@ -35,12 +36,14 @@ export default class AppContainer extends Component {
 
   render() {
     const {
+      display,
       places,
       query,
     } = this.state;
     
     return (
       <AppView
+        display={ display }
         handleChange={ this.handleChange }
         places={ places }
         query={ query }

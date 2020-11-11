@@ -15,7 +15,7 @@ export default class ListContainer extends Component {
     console.log('inside list view!',  places);
     
     return (
-      <div className='list-index'>
+      <div className="list-index">
         {
           places.map(place => {
             return (
