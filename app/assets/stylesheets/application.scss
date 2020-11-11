@@ -30,7 +30,7 @@ body {
   background: #f8f8f8;
 }
 
-.navbar-container {
+.navbar-wrapper {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
   border-bottom: 1px solid #e6e6e6;
   background: white;
 
-  .options-container {
+  .options-wrapper {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -59,7 +59,7 @@ body {
     }
   }
 
-  .title-container {
+  .title-wrapper {
     display: flex;
     justify-content: center;
 
@@ -148,12 +148,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .navbar-container {
+  .navbar-wrapper {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 10px;
 
-    .options-container {
+    .options-wrapper {
       margin: inherit;
       padding-bottom: 0px;
     }
