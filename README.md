@@ -1,7 +1,7 @@
 # README
 
 To start the application, please run the following commands.
-- `rails db:create`
+- `rails db:create` (Needs PostgreSQL client)
 - `bundle`
 - `npm install`
 - `yarn`
