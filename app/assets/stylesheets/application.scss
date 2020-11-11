@@ -16,21 +16,47 @@
 
 html, body, #root, .app-wrapper {
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .list-map-wrapper {
   position: relative;
+  padding-top: 20px;
   height: 100%;
+  width: 100%;
 }
 
 #map {
   height: 100%;
   width: 100%;
   position: absolute;
+  visibility: hidden;
 }
 
-.list {
+.list-index {
   position: absolute;
+  width: 100%;
+
+  .list-item {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
+
+    .list-details {
+      padding-left: 10px;
+    }
+
+    .list-image {
+      width: 20%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {

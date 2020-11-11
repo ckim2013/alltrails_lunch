@@ -25,7 +25,9 @@ class GooglePlacesApi
         name: spot.name,
         price_level: spot.price_level,
         rating: spot.rating,
-        reference: spot.reference
+        reference: spot.reference,
+        type: spot.types[0],
+        vicinity: spot.vicinity
       }
     end
   end

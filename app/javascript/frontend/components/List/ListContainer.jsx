@@ -8,9 +8,25 @@ export default class ListContainer extends Component {
   }
 
   render() {
+    const {
+      places,
+    } = this.props;
+
+    console.log('inside list view!',  places);
+    
     return (
-      <ListView
-      />
+      <div className='list-index'>
+        {
+          places.map(place => {
+            return (
+              <ListView
+                key={ place.reference }
+                place={ place }
+              />
+            );
+          })
+        }
+      </div>
     );
   }
 }
