@@ -13,11 +13,13 @@
     "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-star-ratings": "^2.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack-dev-server": "^3.11.0"
   }
 }

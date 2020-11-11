@@ -22,12 +22,14 @@ const AppView = (props) => {
       <Toggle
         display={ display }
       />
-      <List 
-        places={ places }
-      />
-      <Map 
-        places={ places }
-      />
+      <div className='list-map-wrapper'>
+        <List 
+          places={ places }
+        />
+        <Map 
+          places={ places }
+        />
+      </div>
     </div>
   );
 };

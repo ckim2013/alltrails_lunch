@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: './app/javascript/frontend/AllTrailsLunch.jsx',
@@ -17,11 +17,20 @@ module.exports = {
             presets: ['@babel/env', '@babel/react']
           }
         },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: 'file-loader',
+        }
       }
     ]
   },
   devtool: 'source-map',
   resolve: {
+    alias: {
+      Assets: path.resolve(__dirname, 'app', 'assets')
+    },
     extensions: ['.js', '.jsx', '*']
   }
 };
