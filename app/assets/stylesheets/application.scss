@@ -58,6 +58,19 @@ body {
       margin-left: 10px;
     }
   }
+
+  .title-container {
+    display: flex;
+    justify-content: center;
+    
+    img {
+      width: 150px;
+    }
+
+    div {
+      line-height: 45px;
+    }
+  }
 }
 
 #map {

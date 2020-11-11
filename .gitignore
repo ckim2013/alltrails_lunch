@@ -35,5 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-/app/javascript/packs/bundle.js
-/app/javascript/packs/bundle.js.map
+bundle.js
+bundle.js.map

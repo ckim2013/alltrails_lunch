@@ -1,21 +1,16 @@
 import React from 'react';
 
-import Logo from 'Assets/images/logo.png';
-
 const NavBarView = (props) => {
   const { 
     handleChange,
     query,
   } = props;
   
-  
-  console.log('logoo', Logo);
-  
   return (
     <div className="navbar-container">
       <div className="title-container">
-        <img src={ Logo } alt="Logo" />
-        <div>AllTrails at Lunch</div>
+        <img src="https://cdn-assets.alltrails.com/assets/shared/AT_Main_Logo-da354e8947c2636e86fb27f60cbb037b.png" alt="Logo" />
+        <div>at Lunch</div>
       </div>
       <div className="options-container">
         <button>Filter</button>
