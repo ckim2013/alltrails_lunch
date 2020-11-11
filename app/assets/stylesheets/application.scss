@@ -68,7 +68,9 @@ body {
     }
 
     div {
-      line-height: 45px;
+      margin-top: 8px;
+      margin-left: -5px;
+      font-size: 25px;
     }
   }
 }
@@ -153,11 +155,12 @@ body {
 
     .options-container {
       margin: inherit;
+      padding-bottom: 0px;
     }
   }
 
   .list-index {
-    width: 40%;
+    width: 30%;
     margin-top: inherit;
     height: 100%;
     padding-top: 30px;
@@ -165,7 +168,7 @@ body {
 
   #map {
     height: 100%;
-    width: 60%;
+    width: 70%;
     right: 0;
     visibility: visible;
   }
