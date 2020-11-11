@@ -64,7 +64,7 @@ body {
     justify-content: center;
 
     img {
-      width: 150px;
+      width: 160px;
     }
 
     div {
@@ -146,5 +146,31 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
 
+    .options-container {
+      margin: inherit;
+    }
+  }
+
+  .list-index {
+    width: 40%;
+    margin-top: inherit;
+    height: 100%;
+    padding-top: 30px;
+  }
+
+  #map {
+    height: 100%;
+    width: 60%;
+    right: 0;
+    visibility: visible;
+  }
+
+  .toggle-wrapper {
+    visibility: hidden;
+  }
 }
