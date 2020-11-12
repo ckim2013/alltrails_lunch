@@ -3,11 +3,14 @@ import StarRatings from 'react-star-ratings';
 
 const ListView = (props) => {
   const {
+    focus,
+    focusOnItem,
     place,
   } = props;
 
   const { 
     image_url,
+    reference,
     name,
     price_level,
     rating,
@@ -15,7 +18,10 @@ const ListView = (props) => {
   } = place;
   
   return (
-    <div className="list-item">
+    <div 
+      id={ reference } 
+      onClick={ focusOnItem } 
+      className="list-item">
       <div className="list-image">
         <img src={ image_url }/>
       </div>

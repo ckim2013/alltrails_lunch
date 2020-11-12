@@ -93,6 +93,10 @@ body {
   overflow: scroll;
   margin-top: 12px;
 
+  .focused {
+    border: 2px solid #428a17 !important;
+  }
+
   .list-item {
     height: auto;
     display: flex;

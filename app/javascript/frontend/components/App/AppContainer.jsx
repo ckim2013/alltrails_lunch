@@ -8,16 +8,22 @@ export default class AppContainer extends Component {
     
     this.state = {
       display: 'map',
+      focus: '',
       places: [],
       query: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.updatePlaces = this.updatePlaces.bind(this);
+    this.setFocus = this.setFocus.bind(this);
   }
   
   handleChange(e) {
     this.setState({ query: e.target.value });
+  }
+  
+  setFocus(id) {
+    this.setState({ focus: id });
   }
   
   updatePlaces(places) {
@@ -27,6 +33,7 @@ export default class AppContainer extends Component {
   render() {
     const {
       display,
+      focus,
       places,
       query,
     } = this.state;
@@ -34,9 +41,11 @@ export default class AppContainer extends Component {
     return (
       <AppView
         display={ display }
+        focus={ focus }
         handleChange={ this.handleChange }
         places={ places }
         query={ query }
+        setFocus={ this.setFocus }
         updatePlaces={ this.updatePlaces }
       />
     );

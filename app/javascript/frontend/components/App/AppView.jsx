@@ -8,9 +8,11 @@ import Toggle from '../Toggle/ToggleContainer';
 const AppView = (props) => {
   const {
     display,
+    focus,
     handleChange,
     places,
     query,
+    setFocus,
     updatePlaces,
   } = props;
   
@@ -26,7 +28,9 @@ const AppView = (props) => {
       />
       <div className='list-map-wrapper'>
         <List 
+          focus={ focus }
           places={ places }
+          setFocus={ setFocus }
         />
         <Map 
           places={ places }
